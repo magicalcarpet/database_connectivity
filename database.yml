@@ -1,0 +1,8 @@
+database:
+    db_name: 'mytestdb'
+    username: postgres
+    password: Friday
+    port: 5432
+
+
+
