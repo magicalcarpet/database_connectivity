@@ -1,8 +1,16 @@
 database:
-    db_name: 'mytestdb'
-    username: postgres
-    password: Friday
-    port: 5432
-
-
+    postgres:
+        db_name: mytestdb
+        username: postgres
+        password: Friday
+        port: 5432
+        dialect: postgresql
+        host: localhost
+    mysql:
+        db_name: menagerie
+        username: jamie_vardy
+        password: Leicester
+        port: 3306
+        dialect: mysql
+        host: localhost
 
