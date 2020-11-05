@@ -8,9 +8,16 @@ database:
         host: localhost
     mysql:
         db_name: menagerie
-        username: jamie_vardy
-        password: Leicester
+        username: root
+        password: Monday
         port: 3306
-        dialect: mysql
+        dialect: pymysql
+        host: localhost
+    mongo:
+        db_name: films
+        username: root
+        password: Monday
+        port: 27017
+        dialect: mongodb
         host: localhost
 

@@ -1,4 +1,39 @@
-INSERT INTO tutorials_tbl 
-   (tutorial_title, tutorial_author, submission_date)
-   VALUES
-   ("Visit Wales", "Daffyd Llwellyn", NOW());
+GRANT ALL PRIVILEGES ON dbname.* TO 'jamie'@'localhost';
+
+
+SHOW GRANTS FOR 'jamie'@'localhost';
+
+CREATE TABLE example ( id smallint unsigned not null auto_increment, name varchar(20) not null, constraint pk_example primary key (id) );
+INSERT INTO example ( id, name ) VALUES ( null, 'Sample data' );
+INSERT INTO example ( id, name ) VALUES ( null, 'Axis Power' );
+INSERT INTO example ( id, name ) VALUES ( null, 'Neutral' );
+
++----+-------------+
+| id | name        |
++----+-------------+
+|  1 | Sample data |
+|  2 | Axis Power  |
+|  3 | Neutral     |
++----+-------------+
+
+# The table is represented as a list of dictionaries
+example = [{'1': 'Sample data'}, {'2': 'Axis Power'}, {'3': 'Neutral'}]
+
+
+example[0]['1']
+
+GRANT ALL PRIVILEGES ON menagerie.* TO 'jackson'@'localhost';
+SHOW GRANTS FOR 'jackson'@'localhost';
+
+
+docker run -d --name mongodb -v ~/mongo/data:/data/db -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=Monday mongo:latest
+
+db.tutorialspoint.insert({"name" : "tutorialspoint"}), WriteResult({ "nInserted" : 1 })
+
+db.inventory.insertOne(
+   { item: "canvas", qty: 100, tags: ["cotton"], size: { h: 28, w: 35.5, uom: "cm" } }
+)
+
+engine = create_engine("mongodb///?Server=MyServer&Port=27017&Database=test&User=test&Password=Password")
+
+mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
